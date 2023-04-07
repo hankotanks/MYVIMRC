@@ -42,6 +42,7 @@ call vundle#begin('~/vimfiles/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'YorickPeterse/vim-paper'
+Plugin 'adigitoleo/vim-mellow'
 Plugin 'tpope/vim-unimpaired'
 
 call vundle#end()
@@ -51,7 +52,9 @@ filetype plugin indent on " End of package manager stuff
 if has('termguicolors')
   set termguicolors
 endif
-color paper
+set termguicolors
+
+color mellow 
 
 "
 " ZETTEL RELATED CONFIGURATION
@@ -90,6 +93,8 @@ nnoremap <leader>mnn :exe "normal! a" . "<<" . strftime("%Y%m%d.%H%M") . ".txt>>
 nnoremap <leader>mu :! ruby reg.rb <CR>
 " Update register.txt then orphans.txt
 nnoremap <leader>muu :! ruby reg.rb & ruby orph.rb <CR>
+" Update the web representation of the zettlekasten
+nnoremap <leader>mw :! ruby web.rb <CR>
 
 "
 "

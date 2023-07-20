@@ -412,3 +412,7 @@ blockquote .marginnote {
     min-width: 59%;
     text-align: left;
 }
+
+.hdlist1 {
+  font-size: 1.4rem;
+}
